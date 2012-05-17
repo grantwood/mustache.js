@@ -1,8 +1,8 @@
 {
-  "name": "mustache",
+  "name": "mustache-sql",
   "version": "0.5.0-dev",
-  "description": "Logic-less {{mustache}} templates with JavaScript",
+  "description": "SQL escaped Mustache templates",
   "author": "mustache.js Authors <http://github.com/janl/mustache.js>",
-  "keywords": ["mustache", "template", "templates", "ejs"],
+  "keywords": ["mustache", "template", "templates", "sql"],
   "main": "./mustache"
 }
