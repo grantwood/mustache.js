@@ -1,4 +1,8 @@
 /*!
+ * WARNING: DANGEROUS FOR HTML OUTPUT
+ * https://github.com/grantwood/mustache.js
+ *
+ * Original:
  * mustache.js - Logic-less {{mustache}} templates with JavaScript
  * http://github.com/janl/mustache.js
  */
