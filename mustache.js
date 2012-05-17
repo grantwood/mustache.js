@@ -81,17 +81,23 @@ var Mustache = (typeof module !== "undefined" && module.exports) || {};
     };
   }
 
+// escapes SQL special characters
   var escapeMap = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': '&quot;',
-    "'": '&#39;'
+    "\0": "\\0",
+    "\x08": "\\b",
+    "\x09": "\\t",
+    '\x1a': '\\z',
+    '\n': '\\n',
+    '\r': '\\r',
+    '"': '\\"',
+    '\'': '\\\'',
+    '\\': '\\\\',
+    "%": '\\%'
   };
 
   function escapeHTML(string) {
-    return String(string).replace(/&(?!\w+;)|[<>"']/g, function (s) {
-      return escapeMap[s] || s;
+    return String(string).replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
+      return escapeMap[char] || char;
     });
   }
 
